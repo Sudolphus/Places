@@ -1,19 +1,23 @@
-# _{Application Name}_
+# _Places You've Been_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _A Page About Places You've Been, 06.15.2020_
 
 #### By _**Micheal Hansen**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This application lets you enter places you've been, and qualities about those places, then allows you to display those places._
 
 ## Specifications
 
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
 | **Homepage** | User accesses localhost:5004 | Homepage with user input form |
-| **Program Gathers User Input** | User input: "10" | Output: "10" |
+| **Program Gathers User Input** | User input: "Portland" | Output: "Portland" |
+| **Program Creates A Class of that Type** | User input: "Portland" | Output: "Portland" |
+| **Program Can Add Qualities to Places** | User input: "Location: Oregon" | Output: "Portland{Location=[Oregon]" |
+| **Program Can Delete Qualities from Places** | User input: "Delete: Oregon" | Output: "Portland{Location=[]}" |
+| **Program Can Display Places and their Qualities** | User input: "Portland" | Output: "Portland, Location: Portland" |
 
 
 ## Setup/Installation Requirements
@@ -28,18 +32,15 @@ Open by downloading:
 
 Open via Bash/GitBash:
 1. Clone this repository onto your computer:
-`git clone {PUT_REPO_HERE}`
-2. Navigate into the `{NAME_OF_DIRECTORY}` directory in Visual Studio Code or preferred text editor
+`git clone https://github.com/Sudolphus/Places`
+2. Navigate into the `Places` directory in Visual Studio Code or preferred text editor
 `code .`
 3. Open index.html in Chrome or preferred browser:
 `open index.html`
 
-#### To see my live website go to {GH_PAGES_LINK_HERE}!
-
-
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_None_
 
 ## Support and contact details
 
