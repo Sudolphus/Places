@@ -22,3 +22,19 @@ Place.prototype.addTimeOfYear = function(name) {
 Place.prototype.addNote = function(name) {
   this.notes.push(name);
 }
+
+Place.prototypes.removeLocation = function(id) {
+  delete this.locations[id];
+}
+
+Place.prototype.removeLandmark = function(id) {
+  delete this.landmarks[id];
+}
+
+Place.prototype.removeTimeOfYear = function(id) {
+  delete this.timeOfYear[id];
+}
+
+Place.prototype.removeNote = function(id) {
+  delete this.notes[id];
+}
