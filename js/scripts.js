@@ -19,7 +19,7 @@ Place.prototype.addLocation = function(name) {
   this.locations.push(name);
 }
 
-Place.prototype.addLandmarks = function(name) {
+Place.prototype.addLandmark = function(name) {
   this.landmarks.push(name);
 }
 
