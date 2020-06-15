@@ -32,14 +32,24 @@
             <input type="text" name="qualityInput" class="form-control">
           </div>
           <div class="col-md-3">
-            <button class="btn btn-info">Add!</button>
+            <button class="btn btn-info" id="addQuality">Add!</button>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class='col-md-3'>
+        <div class="col-md-3">
+          <p class="qualityLabel">Place to Add:</p>
+        </div>
+        <div class="col-md-3">
+          <select id="addedPlaces">
+
+          </select>
+        </div>
+        <div class="col-md-3">
           <p class="qualityLabel">Type of Quality:</p>
-          <select>
+        </div>
+        <div class="col-md-3">
+          <select id="qualityType">
             <option value="location">Location</option>
             <option value="landmark">Landmark</option>
             <option value="timeOfYear">Time Of Year</option>
@@ -47,6 +57,7 @@
           </select>
         </div>
       </div>
+      
       
     </div>
   </body>

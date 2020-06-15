@@ -7,6 +7,14 @@ ListOfPlaces.prototype.addPlace = function(name) {
   this.places.push(name);
 }
 
+ListOfPlaces.prototype.findPlace = function(name) {
+  for (i = 0; i < this.places.length; i++) {
+    if (this.places[i].place === name) {
+      return this.places[i];
+    }
+  }
+}
+
 function Place(name) {
   this.place = name;
   this.locations = [];
@@ -57,9 +65,19 @@ $(document).ready(function () {
     if (!placeName) {
       alert('Enter a Place Name!');
       return;
+    } else if (placeList.findPlace(placeName)) {
+      alert('That place is already added!');
     }
 
     const newPlace = new Place(placeName);
     placeList.addPlace(newPlace);
+    $("#addedPlaces").append(`<option value="${placeName}">${placeName}</option>`)
+  })
+  $("#addQuality").click(function() {
+    const value = $("input[name=qualityInput]").val();
+    const type = $("#qualityType").val();
+    const place = $('#addedPlaces').val();
+
+
   })
 })
