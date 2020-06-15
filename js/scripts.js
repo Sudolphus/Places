@@ -90,7 +90,7 @@ $(document).ready(function () {
       }
       if (placeRef.timeOfYear.length > 0){
         $(`#output${placeName}`).append(`<ul id='timeOfYear${placeName}'><strong>Time of Year:</ul>`)
-        placeRef.locations.forEach(function(element) {
+        placeRef.timeOfYear.forEach(function(element) {
           $(`#timeOfYear${placeName}`).append(`<li>${element}</li>`);
         })
       }
