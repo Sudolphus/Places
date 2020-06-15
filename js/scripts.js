@@ -78,6 +78,22 @@ $(document).ready(function () {
     const type = $("#qualityType").val();
     const place = $('#addedPlaces').val();
 
+    if (!value) {
+      alert("Enter a value to be appended!");
+      return;
+    }
 
+    let appendedPlace = placeList.findPlace(place);
+
+    if (type === "location") {
+      placeList.addLocation(value);
+    } else if (type === "landmark") {
+      placeList.addLandmark(value);
+    } else if (type === "timeofYear") {
+      placeList.addTimeOfYear(value);
+    } else if (type === "note") {
+      placeList.addNote(value);
+    }
+    
   })
 })
