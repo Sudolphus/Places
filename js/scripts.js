@@ -1,4 +1,12 @@
 //business logic
+function ListOfPlaces() {
+  this.places = [];
+}
+
+ListOfPlaces.prototype.addPlace = function(name) {
+  this.places.push(name);
+}
+
 function Place(name) {
   this.place = name;
   this.locations = [];
@@ -23,7 +31,7 @@ Place.prototype.addNote = function(name) {
   this.notes.push(name);
 }
 
-Place.prototypes.removeLocation = function(id) {
+Place.prototype.removeLocation = function(id) {
   delete this.locations[id];
 }
 
@@ -38,3 +46,20 @@ Place.prototype.removeTimeOfYear = function(id) {
 Place.prototype.removeNote = function(id) {
   delete this.notes[id];
 }
+
+const placeList = new ListOfPlaces();
+
+//user interface
+$(document).ready(function () {
+  $("#addPlace").click(function() {
+    const placeName = $("input[name=placeName]").val();
+
+    if (!placeName) {
+      alert('Enter a Place Name!');
+      return;
+    }
+
+    const newPlace = new Place(placeName);
+    placeList.addPlace(newPlace);
+  })
+})
