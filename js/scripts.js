@@ -72,6 +72,11 @@ $(document).ready(function () {
     const newPlace = new Place(placeName);
     placeList.addPlace(newPlace);
     $("#addedPlaces").append(`<option value="${placeName}">${placeName}</option>`)
+
+    $("#output").append(`<li class="places" id="output${placeName}">${placeName}</li>`);
+    $(`#output${placeName}`).click(function() {
+      
+    })
   })
   $("#addQuality").click(function() {
     const value = $("input[name=qualityInput]").val();
@@ -94,6 +99,5 @@ $(document).ready(function () {
     } else if (type === "note") {
       placeList.addNote(value);
     }
-    
   })
 })

@@ -5,3 +5,13 @@ button, #addedPlaces {
 .qualityLabel {
   text-align: right;
 }
+
+.places {
+  color: blue;
+  text-decoration: underline;
+}
+
+.places:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
