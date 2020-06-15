@@ -75,9 +75,33 @@ $(document).ready(function () {
 
     $("#output").append(`<li class="places" id="output${placeName}">${placeName}</li>`);
     $(`#output${placeName}`).click(function() {
-      
+      const placeRef = placeList.findPlace($(`#output${placeName}`).html());
+      if (placeRef.locations.length > 0){
+        $(`#output${placeName}`).append(`<ul id='location${placeName}'><strong>Locations:</ul>`)
+        placeRef.locations.forEach(function(element) {
+          $(`#location${placeName}`).append(`<li>${element}</li>`);
+        })
+      }
+      if (placeRef.landmarks.length > 0){
+        $(`#output${placeName}`).append(`<ul id='landmark${placeName}'><strong>Landmarks:</ul>`)
+        placeRef.locations.forEach(function(element) {
+          $(`#landmark${placeName}`).append(`<li>${element}</li>`);
+        })
+      }
+      if (placeRef.timeOfYear.length > 0){
+        $(`#output${placeName}`).append(`<ul id='timeOfYear${placeName}'><strong>Time of Year:</ul>`)
+        placeRef.locations.forEach(function(element) {
+          $(`#timeOfYear${placeName}`).append(`<li>${element}</li>`);
+        })
+      }
+      if (placeRef.notes.length > 0){
+        $(`#output${placeName}`).append(`<ul id='notes${placeName}'><strong>Notes:</ul>`)
+        placeRef.notes.forEach(function(element) {
+          $(`#notes${placeName}`).append(`<li>${element}</li>`);
+        })
+      }
+      })
     })
-  })
   $("#addQuality").click(function() {
     const value = $("input[name=qualityInput]").val();
     const type = $("#qualityType").val();
@@ -91,13 +115,13 @@ $(document).ready(function () {
     let appendedPlace = placeList.findPlace(place);
 
     if (type === "location") {
-      placeList.addLocation(value);
+      appendedPlace.addLocation(value);
     } else if (type === "landmark") {
-      placeList.addLandmark(value);
+      appendedPlace.addLandmark(value);
     } else if (type === "timeofYear") {
-      placeList.addTimeOfYear(value);
+      appendedPlace.addTimeOfYear(value);
     } else if (type === "note") {
-      placeList.addNote(value);
+      appendedPlace.addNote(value);
     }
   })
 })

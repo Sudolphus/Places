@@ -15,3 +15,8 @@ button, #addedPlaces {
   color: darkblue;
   text-decoration: underline;
 }
+
+.places > ul, li {
+  color: black;
+  text-decoration: none;
+}
