@@ -77,25 +77,25 @@ $(document).ready(function () {
     $(`#output${placeName}`).click(function() {
       const placeRef = placeList.findPlace($(`#output${placeName}`).html());
       if (placeRef.locations.length > 0){
-        $(`#output${placeName}`).append(`<ul id='location${placeName}'><strong>Locations:</ul>`)
+        $(`#output${placeName}`).append(`<ul id='location${placeName}'><strong>Locations:</strong></ul>`)
         placeRef.locations.forEach(function(element) {
           $(`#location${placeName}`).append(`<li>${element}</li>`);
         })
       }
       if (placeRef.landmarks.length > 0){
-        $(`#output${placeName}`).append(`<ul id='landmark${placeName}'><strong>Landmarks:</ul>`)
+        $(`#output${placeName}`).append(`<ul id='landmark${placeName}'><strong>Landmarks:</strong></ul>`)
         placeRef.locations.forEach(function(element) {
           $(`#landmark${placeName}`).append(`<li>${element}</li>`);
         })
       }
       if (placeRef.timeOfYear.length > 0){
-        $(`#output${placeName}`).append(`<ul id='timeOfYear${placeName}'><strong>Time of Year:</ul>`)
+        $(`#output${placeName}`).append(`<ul id='timeOfYear${placeName}'><strong>Time of Year:</strong></ul>`)
         placeRef.timeOfYear.forEach(function(element) {
           $(`#timeOfYear${placeName}`).append(`<li>${element}</li>`);
         })
       }
       if (placeRef.notes.length > 0){
-        $(`#output${placeName}`).append(`<ul id='notes${placeName}'><strong>Notes:</ul>`)
+        $(`#output${placeName}`).append(`<ul id='notes${placeName}'><strong>Notes:</strong></ul>`)
         placeRef.notes.forEach(function(element) {
           $(`#notes${placeName}`).append(`<li>${element}</li>`);
         })
